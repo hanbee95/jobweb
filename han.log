@@ -1,0 +1,40 @@
+#HAN 20231110 - following https://www.youtube.com/watch?v=ECMB4kUCKWQ, to setup next js
+start setup:
+    command: npx create-next-app@latest
+Question from the command:
+    √ What is your project named? ... jobweb
+    √ Would you like to use TypeScript? ... No / Yes
+    √ Would you like to use ESLint? ... No / Yes
+    √ Would you like to use Tailwind CSS? ... No / Yes
+    √ Would you like to use `src/` directory? ... No / Yes
+    √ Would you like to use App Router? (recommended) ... No / Yes
+    √ Would you like to customize the default import alias (@/*)? ... No / Yes    
+nextjs command:
+    npm run dev : execute dev environment
+    npm run build: build file generation
+    npm run start: service start    
+hit 'npm run dev' in jobweb dir
+-> http://localhost:3000  (In the web, 'Get started by editing src/app/page.tsx' mentioned)
+In the Youtube, pages>index.js is the base, but since I used tsx, the path is different: src/app/page.tsx
+
+modified the page.tsx file to only have 'Hello Next.js' in it 
+
+I want to build generation
+-> npm run build
+-> .next is build file
+
+I want to use the .next (real server start)
+-> npm run start
+
+npm run dev (developement)
+
+Route : URL -> how to react UI.
+http://a.com/       -> /pages/index.js (in my side: src/app/page.tsx)
+http://a.com/sub/   -> /pages/sub/index.js (in my side: src/app/sub/page.tsx)
+http://a.com/sub/1  -> /pages/sub/[id].js (in my side: src/app/sub/[id].tsx)
+
+change src/app/page.tsx file: <a href='/sub'> src/app/sub/page.tsx
+-> page not found
+--> generate 'sub' directory in /src/app/sub, and make page.tsx file.
+
+http://a.com/sub/1 : 1: parameter
